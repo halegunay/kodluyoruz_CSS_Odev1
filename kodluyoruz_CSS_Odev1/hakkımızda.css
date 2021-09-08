@@ -1,0 +1,206 @@
+
+h1{
+    text-align: center;
+    color:whitesmoke;
+    font-size: 80px;
+    
+}
+h2{
+    color:whitesmoke;
+    font-size: 30px;
+    text-align: center;
+    
+}
+body {
+    align-items: center;
+    background-color: #D5C4FF;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+  }
+  
+  .gopher {
+    height: 20rem;
+    width: 20rem;
+  }
+  
+  .gopher-animation,
+  .left-arm,
+  .right-arm,
+  .right-foot,
+  .left-foot,
+  .belly,
+  .shadow,
+  .left-eye,
+  .right-eye,
+  .mouth,
+  .tongue {
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  .left-eye,
+  .right-eye {
+    animation-name: blink;
+  }
+  
+  @keyframes blink {
+    0%,
+    18%,
+    100% {
+      visibility: hidden;
+    }
+    15% {
+      visibility: visible;
+    }
+  }
+  
+  .mouth,
+  .tongue {
+    animation-name: shout;
+  }
+  
+  @keyframes shout {
+    0%,
+    18%,
+    100% {
+      visibility: hidden;
+    }
+    10% {
+      visibility: visible;
+    }
+  }
+  
+  .gopher-animation {
+    animation-name: jump;
+  }
+  
+  @keyframes jump {
+    0%,
+    15%,
+    100% {
+      transform: translateY(0);
+    }
+    6% {
+      transform: translateY(5%);
+    }
+    12% {
+      transform: translateY(-30%);
+    }
+  }
+  
+  .right-arm {
+    animation-name: rotateRightArm;
+    transform-box: fill-box;
+  }
+  
+  @keyframes rotateRightArm {
+    0%,
+    6%,
+    18%,
+    100% {
+      transform: rotate(0deg); 
+    }
+    13% {
+      transform: rotate(-120deg) translateX(-50%);
+    }
+  }
+  
+  .left-arm {
+    animation-name: rotateLeftArm;
+    transform-box: fill-box;
+    transform-origin: top right;
+  }
+  
+  @keyframes rotateLeftArm {
+    0%,
+    6%,
+    18%,
+    100% {
+      transform: rotate(0deg); 
+    }
+    13% {
+      transform: rotate(120deg) translateX(50%);
+    }
+  }
+  
+  .right-foot {
+    animation-name: bendRightFoot;
+    transform-origin: top left;
+  }
+  
+  @keyframes bendRightFoot {
+    0%,
+    15%,
+    100% {
+      transform: translateY(0);
+    }
+    6% {
+      transform: translateY(-3%);
+    }
+    12% {
+      transform: translateY(5%) rotate(-5deg);
+    }
+  }
+  
+  
+  .left-foot {
+    animation-name: bendLeftFoot;
+    transform-origin: top right;
+  }
+  
+  @keyframes bendLeftFoot {
+    0%,
+    15%,
+    100% {
+      transform: translateY(0);
+    }
+    6% {
+      transform: translateY(-3%);
+    }
+    12% {
+      transform: translateY(5%) rotate(5deg);
+    }
+  }
+  
+  .belly {
+    animation-name: bounce;
+  }
+  
+  @keyframes bounce {
+    0%,
+    10%,
+    15%,
+    18%,
+    100% {
+      transform: translateY(0);
+    }
+    6% {
+      transform: translateY(1%);
+    }
+    12% {
+      transform: translateY(-2%);
+    }
+    16% {
+      transform: translateY(1%);
+    }
+  }
+  
+  .shadow {
+    animation-name: scaleShadow;
+    transform-origin: center center;
+    transform: scaleX(1);
+  }
+  
+  @keyframes scaleShadow {
+    0%,
+    8%,
+    15%,
+    100% {
+      transform: scaleX(1)
+    }
+    12% {
+      transform: scaleX(0.65)
+    }
+  }
